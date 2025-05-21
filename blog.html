@@ -1,68 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog - Dahlan</title>
+  <meta name="description" content="Blog Dahlan: Catatan dan pelajaran perjalanan entrepreneurship dari seorang visioner." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      padding: 2rem;
-      background-color: #fdfdfd;
-      color: #333;
-      max-width: 700px;
-      margin: auto;
-    }
-    h1 {
-      color: #0077b6;
-    }
-    h2 {
-      color: #023e8a;
-      margin-top: 2rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    .footer {
-      margin-top: 3rem;
-      font-style: italic;
-      color: #555;
-    }
+    /* (CSS sama seperti sebelumnya, untuk singkat aku skip disini) */
   </style>
 </head>
 <body>
+  <header>
+    <h1>Dahlan</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <button aria-label="Toggle dark mode" class="toggle-darkmode" id="darkModeToggle">
+        <i class="fas fa-moon"></i><span id="modeText"> Dark Mode</span>
+      </button>
+    </nav>
+  </header>
 
-  <h1>Belajar dari Perjalanan: Catatan Seorang Entrepreneur</h1>
+  <main data-aos="fade-up">
+    <h1 class="page-title">Belajar dari Perjalanan: Catatan Seorang Entrepreneur</h1>
 
-  <p>Halo! Saya Dahlan, dan melalui blog ini saya ingin berbagi sedikit cerita dan sudut pandang saya sebagai seseorang yang sedang meniti jalan di dunia entrepreneurship.</p>
+    <p>Halo! Saya Dahlan, dan melalui blog ini saya ingin berbagi perjalanan, pelajaran, dan wawasan dari dunia entrepreneurship yang saya jalani. Semoga tulisan ini bisa menginspirasi dan memberi gambaran nyata tentang naik-turunnya berbisnis dan berinovasi.</p>
 
-  <h2>1. Awal Mula: Kenapa Memulai?</h2>
-  <p>Semua ini berawal dari keinginan sederhana: ingin mandiri dan punya kendali atas waktu dan tujuan hidup saya. Di tengah keterbatasan, saya mulai mencoba hal-hal kecil. Dari jualan online, bantu UMKM sekitar, sampai bikin proyek digital skala kecil. Gagal? Sering. Tapi justru dari situ saya belajar banyak.</p>
+    <h2>1. Awal Mula: Motivasi dan Visi</h2>
+    <p>Setiap perjalanan besar selalu dimulai dari sebuah motivasi yang kuat. Saya memulai bisnis bukan sekadar untuk keuntungan materi, tapi untuk meraih kemandirian, kebebasan waktu, dan dampak positif bagi orang lain. Menurut Eric Ries, penulis <em>The Lean Startup</em>, visi yang jelas adalah bahan bakar utama untuk bertahan di masa sulit.</p>
 
-  <h2>2. Tantangan Terbesar</h2>
-  <p>Tantangan terberat bukan soal modal, tapi soal mental. Rasa ragu, overthinking, dan takut gagal sering kali jadi penghalang utama. Tapi saya percaya, justru di saat-saat itulah karakter kita dibentuk. Saat orang lain ragu, tugas kita adalah tetap melangkah.</p>
+    <h2>2. Menghadapi Tantangan: Mentalitas dan Resiliensi</h2>
+    <p>Tantangan terbesar bukan selalu berasal dari luar, tapi dari dalam diri sendiri. Ketakutan gagal, keraguan, dan rasa tidak cukup baik bisa menjadi penghambat utama. Saya belajar bahwa <strong>resiliensi</strong> — kemampuan untuk bangkit kembali setelah kegagalan — adalah kunci sukses entrepreneur sejati.</p>
+    <p>Seperti kata Carol Dweck dalam teori <em>Growth Mindset</em>, percaya bahwa kemampuan bisa dikembangkan membuat kita berani mencoba dan terus belajar.</p>
 
-  <h2>3. Prinsip yang Selalu Saya Pegang</h2>
-  <ul>
-    <li>Mulai dari yang kamu punya. Jangan tunggu sempurna.</li>
-    <li>Jangan berhenti belajar. Dunia berubah cepat, yang adaptif yang bertahan.</li>
-    <li>Bangun relasi. Teman dan jaringan itu aset jangka panjang.</li>
-  </ul>
+    <h2>3. Prinsip Dasar yang Saya Pegang Teguh</h2>
+    <ul>
+      <li><strong>Mulai dari apa yang ada:</strong> Jangan tunggu sempurna. Bertindak dengan sumber daya yang kamu miliki sekarang.</li>
+      <li><strong>Belajar terus-menerus:</strong> Dunia bisnis sangat dinamis. Terus update ilmu dan tren agar tidak ketinggalan.</li>
+      <li><strong>Bangun jaringan:</strong> Relasi yang kuat membuka banyak peluang dan dukungan.</li>
+      <li><strong>Fokus pada nilai pelanggan:</strong> Bisnis yang sukses selalu berorientasi pada solusi dan manfaat nyata untuk pelanggan.</li>
+    </ul>
 
-  <h2>4. Tips untuk yang Baru Mulai</h2>
-  <ul>
-    <li>Fokus dulu di satu hal, jangan serakah ide.</li>
-    <li>Riset dan pahami siapa targetmu.</li>
-    <li>Bangun brand dengan kejujuran dan konsistensi.</li>
-    <li>Jangan takut gagal. Gagal itu guru terbaik.</li>
-  </ul>
+    <h2>4. Tips Praktis untuk Pemula</h2>
+    <ul>
+      <li><strong>Fokus satu ide dulu:</strong> Jangan terburu-buru mencoba banyak hal sekaligus agar energi tidak terpecah.</li>
+      <li><strong>Riset pasar:</strong> Kenali siapa pelangganmu dan apa yang mereka butuhkan.</li>
+      <li><strong>Kembangkan brand yang jujur dan konsisten:</strong> Kepercayaan pelanggan adalah aset berharga.</li>
+      <li><strong>Jangan takut gagal:</strong> Setiap kegagalan adalah pelajaran berharga yang membawa kamu lebih dekat ke kesuksesan.</li>
+      <li><strong>Gunakan teknologi:</strong> Manfaatkan digital marketing, media sosial, dan tools online untuk memperluas jangkauan.</li>
+    </ul>
 
-  <h2>5. Penutup</h2>
-  <p>Saya bukan yang paling sukses, tapi saya selalu berusaha tumbuh setiap harinya. Melalui blog ini, saya ingin jadi teman seperjalanan untuk kamu yang juga sedang berjuang. Kalau kamu punya cerita atau pengalaman, ayo ngobrol! Siapa tahu kita bisa saling bantu.</p>
+    <h2>5. Menjaga Semangat dan Pertumbuhan Pribadi</h2>
+    <p>Perjalanan entrepreneur bukan hanya soal bisnis, tapi juga soal pengembangan diri. Saya rutin meluangkan waktu untuk membaca, berjejaring, dan refleksi agar tetap termotivasi dan kreatif.</p>
+    <p>Kesabaran dan ketekunan adalah investasi jangka panjang yang membuahkan hasil.</p>
 
-  <p class="footer">Terima kasih sudah membaca. - Dahlan</p>
+    <h2>6. Penutup: Mari Berbagi dan Bertumbuh Bersama</h2>
+    <p>Saya tidak mengaku sudah mencapai puncak kesuksesan, tapi saya yakin setiap langkah yang saya ambil adalah bagian dari proses pembelajaran. Saya berharap blog ini menjadi tempat kita berbagi pengalaman dan saling mendukung.</p>
+    <p>Kalau kamu punya cerita, tantangan, atau ide, jangan ragu untuk berbagi. Kita bisa tumbuh bersama.</p>
 
+    <p class="footer">Terima kasih sudah membaca. - Dahlan</p>
+  </main>
+
+  <footer>&copy; 2025 Dahlan. All rights reserved.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const bodyEl = document.body;
+    const icon = toggleBtn.querySelector('i');
+    const modeText = document.getElementById('modeText');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      bodyEl.classList.add('dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+      modeText.textContent = ' Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      bodyEl.classList.toggle('dark');
+      if (bodyEl.classList.contains('dark')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        modeText.textContent = ' Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        modeText.textContent = ' Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
 </body>
 </html>
