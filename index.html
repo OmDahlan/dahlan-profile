@@ -4,29 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dahlan | Visionary Entrepreneur</title>
-  <meta name="description" content="Website profil Dahlan, entrepreneur visioner yang menginspirasi dan memimpin inovasi masa depan." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
-  <link
-    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    rel="stylesheet"
-  />
   <style>
-    :root {
-      --color-primary: #0d47a1;
-      --color-primary-dark: #08306b;
-      --color-secondary: #00796b;
-      --color-bg-light: #f7f8fa;
-      --color-bg-dark: #121212;
-      --color-text-light: #333;
-      --color-text-dark: #ddd;
-      --color-white: #fff;
-      --transition: 0.3s ease;
-    }
-    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
@@ -34,90 +17,47 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(
-        to bottom right,
-        var(--color-bg-light),
-        #e3f2fd
-      );
+      background: linear-gradient(to bottom right, #f7f8fa, #e3f2fd);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      color: var(--color-text-light);
-      transition: background-color var(--transition), color var(--transition);
     }
-    body.dark {
-      background: var(--color-bg-dark);
-      color: var(--color-text-dark);
-    }
-
-    /* Container */
     .container {
-      background: var(--color-white);
+      background: #fff;
       border-radius: 20px;
       padding: 40px 30px;
       max-width: 480px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(13, 71, 161, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
       animation: fadeIn 1s ease-in-out;
-      transition: background-color var(--transition), box-shadow var(--transition);
     }
-    body.dark .container {
-      background: #222;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-    }
-
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Profile image */
     .profile-img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid var(--color-secondary);
-      box-shadow: 0 15px 30px rgba(0, 121, 107, 0.3);
+      border: 4px solid #00796b;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       margin-bottom: 20px;
-      transition: border-color var(--transition), box-shadow var(--transition);
+      loading: lazy;
     }
-    body.dark .profile-img {
-      border-color: #33bb99;
-      box-shadow: 0 15px 30px rgba(51, 187, 153, 0.6);
-    }
-
-    /* Text */
     h1 {
       font-size: 28px;
-      color: var(--color-primary);
+      color: #0d47a1;
       margin-bottom: 5px;
-      transition: color var(--transition);
     }
-    body.dark h1 {
-      color: #66aaff;
-    }
-
     p {
       font-size: 15px;
       color: #555;
       margin-bottom: 25px;
-      transition: color var(--transition);
     }
-    body.dark p {
-      color: #bbb;
-    }
-
     .quote {
       background: #e3f2fd;
       font-style: italic;
@@ -125,206 +65,129 @@
       border-radius: 10px;
       font-size: 14px;
       margin-bottom: 25px;
-      color: var(--color-text-light);
-      transition: background-color var(--transition), color var(--transition);
+      color: #333;
     }
-    body.dark .quote {
-      background: #333;
-      color: var(--color-text-dark);
-    }
-
-    /* Buttons */
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 12px;
       width: 100%;
-      background-color: var(--color-primary);
-      color: var(--color-white);
       padding: 14px;
       margin: 10px 0;
       border: none;
       border-radius: 10px;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
       text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.4s ease, transform 0.3s ease,
-        box-shadow 0.3s ease;
       cursor: pointer;
-      user-select: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .btn i {
-      margin-right: 8px;
-      font-size: 18px;
-      transition: color var(--transition);
+      font-size: 20px;
     }
     .btn:hover {
-      background-color: var(--color-primary-dark);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       transform: scale(1.05);
     }
-    body.dark .btn {
-      background-color: #4477cc;
-      color: var(--color-white);
+    .telegram {
+      background-color: #0088cc;
     }
-    body.dark .btn:hover {
-      background-color: #335599;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    .telegram:hover {
+      background-color: #006699;
     }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 12px;
-      color: #777;
-      transition: color var(--transition);
+    .tiktok {
+      background-color: #000;
     }
-    body.dark footer {
-      color: #aaa;
+    .tiktok:hover {
+      background-color: #333;
     }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .container {
-        padding: 20px 15px;
-        max-width: 100%;
-        border-radius: 15px;
-      }
-      h1 {
-        font-size: 24px;
-      }
-      p,
-      .quote {
-        font-size: 13px;
-      }
-      .btn {
-        padding: 12px;
-        font-size: 14px;
-      }
+    .email {
+      background-color: #ea4335;
     }
-
-    /* Dark mode toggle button */
-    .toggle-darkmode {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      border: none;
-      border-radius: 30px;
-      padding: 10px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 6px 12px rgba(13, 71, 161, 0.4);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      z-index: 1000;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .email:hover {
+      background-color: #b33028;
     }
-    .toggle-darkmode:hover {
-      background-color: var(--color-primary-dark);
-      box-shadow: 0 10px 25px rgba(8, 48, 107, 0.7);
+    .whatsapp {
+      background-color: #25d366;
+      color: #fff;
     }
-
+    .whatsapp:hover {
+      background-color: #1da851;
+    }
+    .instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      color: white;
+    }
+    .instagram:hover {
+      filter: brightness(0.9);
+    }
+    .facebook {
+      background-color: #1877f2;
+    }
+    .facebook:hover {
+      background-color: #145dbf;
+    }
+    .linkedin {
+      background-color: #0a66c2;
+    }
+    .linkedin:hover {
+      background-color: #084a9e;
+    }
+    .quora {
+      background-color: #b92b27;
+    }
+    .quora:hover {
+      background-color: #7d1a19;
+    }
+    .blog {
+      background-color: #555;
+    }
+    .blog:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
-  <button aria-label="Toggle dark mode" class="toggle-darkmode" id="darkModeToggle">
-    <i class="fas fa-moon"></i> Dark Mode
-  </button>
-
-  <div class="container" data-aos="fade-up">
-    <img
-      src="dahlan-profile.png"
-      alt="Foto profil Dahlan"
-      class="profile-img"
-      loading="lazy"
-    />
+  <div class="container">
+    <img src="dahlan-profile.png" alt="Dahlan" class="profile-img" loading="lazy" />
     <h1>Dahlan</h1>
     <p>Young entrepreneur with a vision to lead, create, and inspire.</p>
-    <div class="quote">
-      “Transformasi tidak dimulai dari luar, tapi dari cara kita memandang dunia.”
-    </div>
-    <a
-      href="https://t.me/aaaalannnn1"
-      class="btn"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><i class="fab fa-telegram-plane"></i> Telegram</a
-    >
-    <a
-      href="https://www.tiktok.com/@aa.aaalan?_t=ZS-8wW1lgYg5oG&_r=1"
-      class="btn"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><i class="fab fa-tiktok"></i> TikTok</a
-    >
-    <a href="mailto:contact@dahlan.web.id" class="btn"
-      ><i class="fas fa-envelope"></i> Email</a
-    >
-    <a
-      href="https://wa.me/639463359582"
-      class="btn"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><i class="fab fa-whatsapp"></i> WhatsApp</a
-    >
-    <a
-      href="https://www.instagram.com/user15010601?igsh=MWwweTJjdWdtZ3BjZQ=="
-      class="btn"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><i class="fab fa-instagram"></i> Instagram</a
-    >
-    <a href="blog.html" class="btn" target="_blank" rel="noopener noreferrer"
-      ><i class="fas fa-blog"></i> Baca Blog Saya</a
-    >
+    <div class="quote">“Transformasi tidak dimulai dari luar, tapi dari cara kita memandang dunia.”</div>
+
+    <a href="https://t.me/aaaalannnn1" target="_blank" rel="noopener noreferrer" class="btn telegram">
+      <i class="fab fa-telegram-plane"></i> Telegram
+    </a>
+    <a href="https://www.tiktok.com/@aa.aaalan?_t=ZS-8wW1lgYg5oG&_r=1" target="_blank" rel="noopener noreferrer" class="btn tiktok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="mailto:contact@dahlan.web.id" class="btn email" rel="noopener noreferrer">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://wa.me/639463359582" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/user15010601?igsh=MWwweTJjdWdtZ3BjZQ==" target="_blank" rel="noopener noreferrer" class="btn instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/Dahlansukakamu" target="_blank" rel="noopener noreferrer" class="btn facebook">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a href="https://www.linkedin.com/in/a-dahlan-8002bb2a9" target="_blank" rel="noopener noreferrer" class="btn linkedin">
+      <i class="fab fa-linkedin-in"></i> LinkedIn
+    </a>
+    <a href="https://id.quora.com/profile/Aa-aaalan" target="_blank" rel="noopener noreferrer" class="btn quora">
+      <i class="fab fa-quora"></i> Quora
+    </a>
+    <a href="blog.html" target="_blank" rel="noopener noreferrer" class="btn blog">
+      <i class="fas fa-blog"></i> Baca Blog Saya
+    </a>
   </div>
 
-  <footer>&copy; 2025 Dahlan. All rights reserved.</footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // Dark mode toggle
-    const toggleBtn = document.getElementById('darkModeToggle');
-    const bodyEl = document.body;
-    const icon = toggleBtn.querySelector('i');
-    const text = toggleBtn;
-
-    // Load mode from localStorage
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      bodyEl.classList.add('dark');
-      icon.classList.replace('fa-moon', 'fa-sun');
-      toggleBtn.childNodes[1].textContent = ' Light Mode';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      bodyEl.classList.toggle('dark');
-      if (bodyEl.classList.contains('dark')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        toggleBtn.childNodes[1].textContent = ' Light Mode';
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        toggleBtn.childNodes[1].textContent = ' Dark Mode';
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-
-    // Smooth scroll (optional - for internal anchors)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth',
-        });
-      });
-    });
-  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </body>
 </html>
