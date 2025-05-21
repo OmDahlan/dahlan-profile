@@ -12,7 +12,178 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
   <style>
-    /* (CSS sama seperti sebelumnya, untuk singkat aku skip disini) */
+    :root {
+      --color-primary: #0d47a1;
+      --color-primary-dark: #08306b;
+      --color-secondary: #00796b;
+      --color-bg-light: #f9fbfd;
+      --color-bg-dark: #121212;
+      --color-text-light: #222;
+      --color-text-dark: #ddd;
+      --color-white: #fff;
+      --transition: 0.3s ease;
+    }
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-bg-light);
+      color: var(--color-text-light);
+      transition: background-color var(--transition), color var(--transition);
+      padding: 80px 20px 40px;
+      max-width: 720px;
+      margin: auto;
+      min-height: 100vh;
+      position: relative;
+    }
+    body.dark {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-dark);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 720px;
+      background: var(--color-white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 999;
+      transition: background-color var(--transition), box-shadow var(--transition);
+    }
+    body.dark header {
+      background: #222;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+    header h1 {
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    body.dark header h1 {
+      color: #66aaff;
+    }
+
+    nav a {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 20px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--color-primary);
+    }
+    body.dark nav a {
+      color: #88bbff;
+    }
+    body.dark nav a:hover {
+      color: #aaddff;
+    }
+
+    .toggle-darkmode {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 30px;
+      padding: 8px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(13, 71, 161, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+    .toggle-darkmode:hover {
+      background-color: var(--color-primary-dark);
+      box-shadow: 0 6px 18px rgba(8, 48, 107, 0.7);
+    }
+
+    main {
+      margin-top: 2rem;
+    }
+
+    h1.page-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: 2rem;
+      transition: color var(--transition);
+    }
+    body.dark h1.page-title {
+      color: #66aaff;
+    }
+
+    h2 {
+      color: var(--color-primary-dark);
+      margin-top: 2.5rem;
+      font-weight: 600;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 0.3rem;
+      transition: color var(--transition);
+    }
+    body.dark h2 {
+      color: #88bbff;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    ul {
+      margin-left: 1.4rem;
+      margin-bottom: 1.2rem;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-style: italic;
+      color: #555;
+      transition: color var(--transition);
+    }
+    body.dark footer {
+      color: #aaa;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 80px 12px 40px;
+        max-width: 100%;
+      }
+      header h1 {
+        font-size: 1.1rem;
+      }
+      nav a {
+        margin-left: 12px;
+        font-size: 0.9rem;
+      }
+      h1.page-title {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
